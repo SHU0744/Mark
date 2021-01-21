@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="株式会社Markのコーポレートサイトです。" />
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Noto+Sans+JP:wght@400;700;900&family=Roboto:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/rest.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <title>株式会社Mark Contact</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="header-wrap">
+            <div class="flex">
+                <h1 class="logo"><a href="index.html">Mark</a></h1>
+                <nav class="nav">
+                    <ul class="ul">
+
+                        <li><a href="about.html"><ruby>私たちについて<rp>(</rp>
+                                    <rt>About</rt>
+                                    <rp>)
+                                </ruby></a></li>
+                        <li><a href="http://noisy-amami-6173.backdrop.jp/MARKLALY" target="_blank"
+                                rel="noopener noreferrer"><ruby>サービス<rp>(</rp>
+                                    <rt>Service</rt>
+                                    <rp>)
+                                </ruby></a></li>
+                        <li><a href="news.html"><ruby>ニュース<rp>(</rp>
+                                    <rt>News</rt>
+                                    <rp>)
+                                </ruby></a></li>
+                        <li><a href="company.html"><ruby>会社概要<rp>(</rp>
+                                    <rt>Company</rt>
+                                    <rp>)
+                                </ruby></a></li>
+                        <li><a href="contact.html"><ruby>お問い合わせ<rp>(</rp>
+                                    <rt>Contact</rt>
+                                    <rp>)
+                                </ruby></a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger" id="js-hamburger">
+                    <span class="hambur-line"></span>
+                </div>
+                <div class="sp-global-menu">
+                    <nav class="hamburger-nav">
+                        <ul class="hamburger-ul">
+                            <li><a href="about.html"><ruby>私たちについて<rp>(</rp>
+                                        <rt>About</rt>
+                                        <rp>)
+                                    </ruby></a></li>
+                            <li><a href="http://noisy-amami-6173.backdrop.jp/MARKLALY" target="_blank"
+                                    rel="noopener noreferrer"><ruby>サービス<rp>(</rp>
+                                        <rt>Service</rt>
+                                        <rp>)
+                                    </ruby></a></li>
+                            <li><a href="news.html"><ruby>ニュース<rp>(</rp>
+                                        <rt>News</rt>
+                                        <rp>)
+                                    </ruby></a></li>
+                            <li><a href="company.html"><ruby>会社概要<rp>(</rp>
+                                        <rt>Company</rt>
+                                        <rp>)
+                                    </ruby></a></li>
+                            <li><a href="contact.html"><ruby>お問い合わせ<rp>(</rp>
+                                        <rt>Contact</rt>
+                                        <rp>)
+                                    </ruby></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="homeTop" id="homeTop">
+        <div class="homeTop-wrap">
+            <div class="text">
+                <h1>Contact</h1>
+                <p>お問い合わせ</p>
+            </div>
+            <div class="img">
+            </div>
+        </div>
+    </div>
+
+    <section class="contact">
+        <div class="contact-wrap">
+            <h2 class="title">お問い合わせ</h2>
+            <p class="teltitle">電話でのお問い合わせ</p>
+            <h3 class="telNumber">0120-123-456</h3>
+            <p class="time">平日 09:00~17:00</p>
+            <p class="info">メールフォームからお問い合わせ、ご要望等がございましたら、以下に必要事項をご記入いただき、プライバシーポリシーをご確認の上、送信してください。</p>
+        </div>
+    </section>
+    <form action="#" method="#" class="form" id="app">
+        <div class="form-wrap">
+            <dl class="dl-name">
+                <dt class="hissu"><label for="name" class="entry">お名前</label></dt>
+                <div class="name-yoko">
+                    <dd class="dd-name yokoPc">
+                        <input type="text" name="name-myouji" id="name" placeholder="山田" value=""
+                            v-model.lazy.trim="firstName">
+                    </dd>
+                    <dd class="yokoPc">
+                        <input type="text" name="name-name" id="name" placeholder="太郎" value=""
+                            v-model.lazy.trim="lastName">
+                    </dd>
+                </div>
+                <dd :class="[alertName ? 'alert':'alert cheak']" id="alertName">{{ nameMessage }}</dd>
+            </dl>
+            <dl class="dl-hurigana">
+                <dt class="hissu"><label for="furigana" class="entry">フリガナ</label></dt>
+                <div class="name-yoko">
+                    <dd class="dd-name yokoPc">
+                        <input type="text" name="furigana-myouji" id="furigana" placeholder="ヤマダ" required
+                            v-model.lazy.trim="firstFri">
+                    </dd>
+                    <dd class="yokoPc">
+                        <input type="text" name="furigana-name" id="furigana" placeholder="タロウ" required
+                            v-model.lazy.trim="lastFri">
+                    </dd>
+                </div>
+                <dd :class="[alertFri ? 'alert':'alert cheak']" id="alertFuri">{{ furiMessage }}</dd>
+            </dl>
+            <dl>
+                <dt class="hissu"><label for="mail" class="entry">
+                        メールアドレス
+                    </label></dt>
+                <dd><input type="email" name="email" class="check" value="" placeholder="○○○○@gmail.com" id="mail"
+                        v-model.lazy.trim="mail"></dd>
+                <dd :class="[alertMail ? 'alert':'alert cheak']" id="alertEmail">{{ mailMessage }}</dd>
+            </dl>
+            <dl>
+                <dt class="hissu"><label for="tel" class="entry">電話番号</label></dt>
+                <dd><input type="tel" name="tel" id="tel" placeholder="ハイフンなし(0000000000)" v-model.lazy.trim="tel">
+                </dd>
+                <dd :class="[alertTel ? 'alert':'alert cheak']" id="alertTel">{{ telMessage }}</dd>
+            </dl>
+            <dl>
+                <dt class="hissu"><label for="company" class="entry">貴社名</label></dt>
+                <dd><input type="text" name="company" id="company" placeholder="○○株式会社" v-model.lazy.trim="company">
+                </dd>
+                <dd :class="[alertCompany ? 'alert':'alert cheak']" id="alertCompany">{{companyMessage}}</dd>
+            </dl>
+            <dl>
+                <dt class="hissu"><label for="textarea" class="entry">お問い合わせ内容</label></dt>
+                <dd><textarea name="textarea" id="textarea" v-model.lazy.trim="entry"></textarea></dd>
+                <dd :class="[alertEntry ? 'alert':'alert cheak']" id="alertText">{{ entryMessage }}</dd>
+            </dl>
+
+            <div class="privacy-po">
+                <div class="privacyList">
+                    <h1>プライバシーポリシー</h1>
+                    <div class="privacyInfo">
+                        <p>コーポレートサイト（以下，「当サイト」といいます。）は，本ウェブサイト上で提供するサービス（以下,「本サービス」といいます。）における，ユーザーの個人情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="privacyList">
+                    <h2>第1条（個人情報）</h2>
+                    <div class="privacyInfo">
+                        <p>「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，当該情報に含まれる氏名，生年月日，住所，電話番号，連絡先その他の記述等により特定の個人を識別できる情報及び容貌，指紋，声紋にかかるデータ，及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="privacyList">
+                    <h2>第2条（個人情報の収集方法）</h2>
+                    <div class="privacyInfo">
+                        <p>運営者は、訪問者がサービスのご利用、お問い合わせをする際に、氏名、住所、連絡先、メールアドレスなどの個人情報をお尋ねすることがあります。</p>
+                    </div>
+                </div>
+
+                <div class="privacyList">
+                    <h2>第3条（個人情報を収集・利用する目的）</h2>
+                    <div class="privacyInfo">
+                        <p>当サイトでは、お客様からのお問い合わせ時に、お名前、e-mailアドレス、電話番号等の個人情報をご登録いただく場合がございますが、これらの個人情報はご提供いただく際の目的以外では利用いたしません。お客さまからお預かりした個人情報は、当サイトからのご連絡や業務のご案内やご質問に対する回答として、電子メールや資料のご送付に利用いたします。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="privacyList">
+                    <h2>第4条（個人情報の第三者提供）</h2>
+                    <div class="privacyInfo">
+                        <p>当方では下記のいずれかに該当する場合を除き、ご本人の承諾無しにお預かりした個人情報を第三者に提供・開示することはございません。
+                        </p>
+                        <ul>
+                            <li><span>1.</span>情報提供者本人の同意がある場合</li>
+                            <li><span>2.</span>法令に基づき公的機関から情報開示の要請があった場合</li>
+                            <li><span>3.</span>人命または財産の保護のために必要であり、直ちに本人の同意を得る事が困難である場合</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="privacyList">
+                    <h2>第5条（開示、訂正、利用停止、削除）</h2>
+                    <div class="privacyInfo">
+                        <p> 当サイトは、利用者から個人情報の開示、訂正、利用停止、削除を求められたときは、法
+                            令に定められた場合を除き、本人確認の上で、遅滞なく開示を行います。
+                            ただし、個人情報の開示につきましては、１件あたり１，０００円の手数料を頂戴し
+                            ておりますので、あらかじめご了承ください。</p>
+                    </div>
+                </div>
+
+                <div class="privacyList">
+                    <h2>第6条（プライバシーポリシーの変更）</h2>
+                    <div class="privacyInfo">
+                        <ul>
+                            <li>本ポリシーの内容は，法令その他本ポリシーに別段の定めのある事項を除いて，ユーザーに通知することなく，変更することができるものとします。</li>
+                            <li>当社が別途定める場合を除いて，変更後のプライバシーポリシーは，本ウェブサイトに掲載したときから効力を生じるものとします。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="privacyList">
+                    <h2>第7条（お問い合わせ窓口）</h2>
+                    <div class="privacyInfo">
+                        <p>個人情報保護に関するお問い合わせや開示、修正、削除のご依頼がある場合は、お問い合わせフォームよりご連絡ください。</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <label for="privacy" class="privacy"><input type="checkbox" name="" id="privacy"
+                    v-model="checked">&ensp;プライバシーポリシーに同意する</label>
+
+            <div class="formButton">
+                <button :type="type" :disabled="!checked" v-bind:class="[checked ? 'submit submitcheak':'submit']"
+                    @click="formBtn">送信</button>
+            </div>
+
+        </div>
+    </form>
+
+
+    <footer class="footer">
+        <div class="footer-wrap">
+            <nav>
+                <ul>
+                    <div class="flex-t">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="http://noisy-amami-6173.backdrop.jp/MARKLALY" target="_blank"
+                                rel="noopener noreferrer">Service</a></li>
+                    </div>
+                    <div class="flex-b">
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="company.html">Company</a></li>
+                        <li><a href="contact.html" class="lastA">Contact</a></li>
+                    </div>
+                </ul>
+            </nav>
+            <small>&copy;️SHU miyamura</small>
+        </div>
+    </footer>
+    <script src="js/vue.min.js"></script>
+    <script src="js/contact.js" type="module"></script>
+</body>
+
+</html>
