@@ -1,0 +1,419 @@
+@import 'module';
+
+@import 'base';
+
+@import 'header';
+
+[v-cloak] {
+  display: none;
+}
+
+.homeTop {
+  border-bottom: 1px solid #979797;
+  padding-top: 85px;
+
+  @include media1050 {
+    padding-top: 8.1vw;
+  }
+
+  @include media768 {
+    border-bottom: none;
+    padding-top: 60px;
+  }
+
+
+  &-wrap {
+    margin-left: 18.6%;
+    height: 694px;
+    display: flex;
+    align-items: center;
+
+    @include media1050 {
+      margin-left: 11%;
+      height: 66.1vw;
+    }
+
+    @include media768 {
+      height: 468px;
+      margin-left: 0;
+      display: block;
+      position: relative;
+    }
+  }
+
+  .text {
+    margin-right: 14%;
+
+    transition: all .3s;
+    transition: all 1s;
+    opacity: 0;
+
+    &.load {
+      opacity: 1;
+    }
+
+    &.is-drawerActive {
+      opacity: 0;
+    }
+
+    @include media768 {
+      z-index: 1;
+      position: absolute;
+      background-color: rgba(229, 230, 231, 0.9);
+      width: 180px;
+      height: 118px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 78px;
+      margin-left: 10%;
+      padding-left: 14px;
+    }
+
+    h1 {
+      font-size: (64rem/16);
+
+      @include media1050 {
+        font-size: 4.8vw;
+      }
+
+      @include media768 {
+        font-size: (36rem/16);
+
+      }
+    }
+
+    p {
+      font-size: (24rem/16);
+
+      @include media1050 {
+        font-size: 3vw;
+        white-space: nowrap;
+      }
+
+      @include media768 {
+        font-size: 1rem;
+
+      }
+    }
+
+  }
+
+  .img {
+    background-image: url(../image/newsimg.png);
+    background-size: auto;
+    background-position: bottom left -100px;
+    background-repeat: no-repeat;
+    height: 694px;
+    width: 100%;
+
+    @include media1050 {
+      height: 66.1vw;
+      background-position: bottom left -200px;
+    }
+
+    @include media768 {
+      height: 468px;
+      background-position: top left -100px;
+      position: absolute;
+      background-size: cover;
+
+    }
+
+  }
+}
+
+
+//news
+
+
+.newNews {
+  &-wrap {
+    padding-top: 88px;
+    padding-bottom: 70px;
+    @include wrapPC;
+
+    @include media1050 {
+      padding-top: 8.36vw;
+      padding-bottom: 6.66vw;
+    }
+
+    @include media768 {
+      @include wrapSp;
+      padding-top: 72px;
+      padding-bottom: 36px;
+      width: 400px;
+    }
+  }
+
+  .tilte {
+    font-size: (36rem/16);
+    color: $main-Navy;
+    margin-bottom: 36px;
+
+    @include media1050 {
+      font-size: 2.6vw;
+      margin-bottom: 3.4vw;
+    }
+
+    @include media768 {
+      font-size: (20rem/16);
+      margin-bottom: 32px;
+    }
+  }
+
+  .selects {
+    margin-bottom: 64px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include media1050 {
+      margin-bottom: 6.1vw;
+    }
+
+    @include media768 {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 24px;
+
+    }
+
+    &-item:first-of-type {
+      margin-right: 24px;
+
+      @include media768 {
+        margin-right: 0;
+        margin-bottom: 24px;
+      }
+    }
+
+    &-item:last-of-type {
+      margin-right: 16px;
+    }
+
+    label {
+      font-size: (24rem/16);
+      margin-right: 16px;
+
+      @include media1050 {
+        font-size: 2.28vw;
+      }
+
+      @include media768 {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 8px;
+      }
+    }
+
+    select {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: (24rem/16);
+      padding: 4px 8px;
+      width: 210px;
+      appearance: menulist;
+      -moz-appearance: menulist;
+      -webkit-appearance: menulist;
+      cursor: pointer;
+
+      @include media1050 {
+        font-size: calc(16px + 2 * (100vw - 769px)/281);
+        width: 19.06vw;
+        width: 20vw;
+      }
+
+      @include media768 {
+        font-size: 1rem;
+        margin-bottom: 24px;
+        width: 200px;
+      }
+    }
+
+    select:last-of-type {
+      margin-bottom: 0px
+    }
+
+
+  }
+
+  .sibori {
+    font-size: (24rem/16);
+    display: inline-block;
+
+    @include media1050 {
+      font-size: 2.28vw;
+    }
+
+    @include media768 {
+      font-size: 1rem;
+      margin-top: 8px;
+    }
+  }
+}
+
+.item-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.fade-enter {
+  /* 現れるときの最初の状態 */
+  opacity: 0;
+  transform: scale(0);
+}
+
+.fade-enter-active {
+  /* 現れるときのトランジションの状態 */
+  transition: all .8s;
+}
+
+.fade-enter-to {
+  /* 現れるときの最後の状態 */
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-leave {
+  /* 消えるときの最初の状態 */
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-leave-active {
+  /* 消えるときのトランジションの状態 */
+  transition: all .8s;
+  // position: absolute;
+}
+
+.fade-leave-to {
+  /* 消えるときの最後の状態 */
+  opacity: 0;
+  transform: scale(0);
+}
+
+.item {
+  max-width: 100%;
+  width: 350px;
+  margin-bottom: 40px;
+
+  @include media1050 {
+    width: 330px;
+    width: 32vw;
+    font-size: calc(14px + 2 * (100vw - 769px)/281);
+    margin-bottom: 4.94vw;
+  }
+
+  @include media768 {
+    margin-bottom: 36px;
+
+    width: 100%;
+
+  }
+
+  .img {
+    max-width: 100%;
+    width: 350px;
+    margin-bottom: 16px;
+
+    @include media1050 {
+      width: 330px;
+      width: 32vw;
+    }
+
+    @include media768 {
+
+      width: 100%;
+
+    }
+
+    img {
+      width: 100%;
+      vertical-align: bottom;
+    }
+  }
+
+  dl {
+    dt {
+      display: inline-block;
+    }
+
+    .time {
+      color: #555454;
+      margin-right: 16px;
+
+      @include media1050 {
+        margin-right: 12px;
+      }
+
+      @include media768 {
+        font-size: (14rem/16);
+        margin-right: 8px;
+      }
+    }
+
+    .pre {
+      display: inline-block;
+      width: 140px;
+      text-align: center;
+      border: 2px solid $main-Navy;
+      border-radius: 10px;
+      padding: 4px 8px;
+      margin-right: 8px;
+
+      @include media1050 {
+        font-size: calc(14px + 2 * (100vw - 769px)/281);
+        width: 14.8vw;
+        padding: 0.4vw .6vw;
+      }
+
+      @include media768 {
+        font-size: (14rem/16);
+        width: 130px;
+        margin-right: 4px;
+      }
+    }
+
+    .NEW {
+      color: #FE000E;
+
+      @include media768 {
+        font-size: (14rem/16);
+
+      }
+    }
+
+    .text {
+      font-size: (24rem/16);
+      margin-top: 8px;
+
+      @include media1050 {
+        font-size: calc(20px + 4 * (100vw - 769px)/281);
+      }
+
+
+      @include media768 {
+        font-size: (20rem/16);
+      }
+    }
+  }
+}
+
+.item:last-of-type {
+  margin-bottom: 0;
+}
+
+
+
+
+
+//conatactFtr
+
+@import 'ctcFooter';
+
+//footer
+
+@import 'footer';

@@ -1,0 +1,128 @@
+$base-color:#F8F9FA;
+$main-Navy:#000D65;
+$accent-Yellow:#FCFF90;
+$accent-color:#FE000E;
+$black-color:#333;
+$white-color2:#fff;
+
+
+@mixin wrapPC {
+  max-width: 78%;
+  width: 1120px;
+  margin: 0 auto;
+}
+
+@mixin wrapSp {
+  max-width: 80%;
+  margin: 0 auto;
+
+}
+
+@mixin contactBtn {
+  text-align: center;
+  display: inline-block;
+  width: 164px;
+  height: 56px;
+  line-height: 56px;
+  background-color: $main-Navy;
+  color: #fff;
+  border-radius: 4px;
+  font-size: (24rem/16);
+  transition: all 0.8s;
+        &:hover {
+        background-color: $white-color2;
+        color: $main-Navy;
+        border: 1px solid rgb(139, 139, 139);
+      }
+  @include media1050 {
+    font-size: 2.4vw;
+    width: 115px;
+    width: 15vw;
+    height: 40px;
+    height: 5.2vw;
+    line-height: 5.2vw;
+    font-size: 14px;
+    font-size: 1.8vw;
+  }
+  @include media768{
+    width: 115px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+@mixin media768($width-media:768px) {
+  @media (max-width:$width-media) {
+    @content
+  }
+}
+
+
+@mixin media1050($width-media2:1050px) {
+  @media (max-width:$width-media2) {
+    @content
+  }
+}
+
+@mixin viewBtn($value:54%) {
+  text-align: center;
+  display: inline-block;
+  width: 228px;
+  height: 76px;
+  line-height: 76px;
+  background-color: $main-Navy;
+  color: #fff;
+  border-radius: 4px;
+  font-size: (24rem/16);
+        transition: all 0.8s;
+      &:hover {
+        background-color: $white-color2;
+        color: $main-Navy;
+         border: 1px solid rgb(139, 139, 139);
+      }
+  @include media1050 {
+    width: $value;
+    height: 6.1vw;
+    line-height: 6.1vw;
+    font-size: 2vw;
+
+  }
+
+  @include media768 {
+    width: 145px;
+    height: 47px;
+    line-height: 47px;
+    font-size: 1rem;
+  }
+}
+
+
+@mixin submitBtn {
+  text-align: center;
+  display: inline-block;
+  width: 200px;
+  height: 64px;
+  line-height: 64px;
+  background-color: $main-Navy;
+  color: #fff;
+  border-radius: 4px;
+  font-size: (24rem/16);
+  @include media1050{
+    width: 19vw;
+    height: 6.1vw;
+    line-height: 6.1vw;
+    font-size: calc(16px + 8 * (100vw - 769px)/281);
+  }
+
+  @include media768 {
+    width: 137px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 1rem;
+  }
+
+}

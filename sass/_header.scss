@@ -1,0 +1,289 @@
+@import 'module';
+
+.header {
+  height: 85px;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background-color: $base-color;
+  border-bottom: 1px solid #979797;
+  margin-bottom: 65px;
+
+  @include media1050 {
+    height: 8.1vw;
+  }
+
+  @include media768 {
+    height: 60px;
+    border-bottom: none;
+  }
+
+  &-wrap {
+    height: 85px;
+
+    @include media1050 {
+      height: 8.1vw;
+    }
+
+    @include media768 {
+      height: 60px;
+
+    }
+
+    .flex {
+      @include wrapPC;
+      height: 85px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include media1050 {
+        height: 8.1vw;
+      }
+
+      @include media768 {
+        height: 60px;
+      }
+    }
+
+    .logo {
+      font-weight: 400;
+      font-size: 2rem;
+      font-family: 'Crimson Text';
+
+      @include media1050 {
+        font-size: 3.05vw;
+      }
+
+      @include media768 {
+        font-size: (24rem/16);
+      }
+
+      a {
+        display: inline-block;
+      }
+    }
+
+    .ul {
+      display: flex;
+
+      @include media1050 {
+        display: none;
+      }
+
+      li {
+        width: 150px;
+        height: 56px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid #CCCCCC;
+        transition: 0.3s;
+        &:hover {   
+           position: relative;
+           transition: 0.3s;
+        }
+        &:hover::after {
+            content: "";
+            width: 100%;
+            height: 16%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background-color:$accent-Yellow;
+            animation: bg_slide 0.4s ease-in;
+        }
+
+        &:last-of-type {
+          border-right: 1px solid #CCCCCC;
+        }
+      }
+
+      @keyframes bg_slide {
+    0% {
+        transform-origin: left top;
+        transform: scaleX(0.0);
+    }
+    100% {
+        transform-origin: left top;
+        transform: scaleX(1.0);
+    }
+}
+
+
+      a {
+        display: inline-block;
+        width: 100%;
+        color: $black-color;
+      }
+
+      ruby {
+        font-size: 1rem;
+
+      }
+    }
+
+    rt {
+      font-size: (14rem/16);
+ 
+      margin-bottom: 4px;
+      transform: translateY(-4px);
+      color: $main-Navy;
+    }
+
+    .hamburger {
+      display: none;
+
+      @include media1050 {
+        display: block;
+        z-index: 10;
+        width: 4.7vw;
+        height: 4.7vw;
+        position: relative;
+        position: fixed;
+        top: 1.8vw;
+        right: 11%;
+        cursor: pointer;
+        background-color: transparent;
+        transition: all .3s ease-in-out;
+      }
+
+      @include media768 {
+        width: 50px;
+        height: 50px;
+        top: 6px;
+        right: 11%;
+
+      }
+    }
+
+    @include media1050 {
+
+      .hambur-line {
+        display: inline-block;
+        background-color: rgb(0, 0, 0);
+        width: 24px;
+        height: 2px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        transition: inherit;
+      }
+
+      .hambur-line::before,
+      .hambur-line::after {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0);
+        transition: inherit;
+        content: "";
+      }
+
+      .hambur-line::before {
+        top: -10px;
+      }
+
+      .hambur-line::after {
+        top: 10px;
+      }
+
+    }
+
+    .sp-global-menu {
+      display: none;
+
+      @include media1050 {
+        display: block;
+        position: fixed;
+        z-index: 4;
+        width: 100vw;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        color: #fff;
+        transform: translateY(100vh);
+        transition: 0.3s;
+
+      }
+
+
+      .hamburger-nav {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .hamburger-ul {
+        text-align: center;
+
+        li {
+          margin-bottom: 36px;
+        }
+
+        li:last-of-type {
+          margin-bottom: 0;
+        }
+
+        ruby {
+          @include media1050 {
+            font-size: calc(16px + 10 * (100vw - 769px)/281);
+          }
+
+          @include media768 {
+            font-size: 1rem;
+          }
+        }
+
+        rt {
+          @include media1050 {
+            font-size: calc(14px + 10 * (100vw - 769px)/281);
+          }
+
+          @include media768 {
+            font-size: (14rem/16);
+          }
+
+        }
+      }
+    }
+
+
+
+
+  }
+}
+
+.is-drawerActive {
+  .hambur-line {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      top: 0px;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.is-drawerActive {
+  .sp-global-menu {
+    transform: translateY(0px);
+    transition: 0.3s;
+  }
+}

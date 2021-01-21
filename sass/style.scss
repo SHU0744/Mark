@@ -1,0 +1,637 @@
+@import 'module';
+
+@import 'base';
+
+
+@import 'header';
+
+//homeTop
+
+.homeTop {
+  background-image: url(../image/home-top.png);
+  background-size: cover;
+  background-position: left bottom 16%;
+  background-repeat: no-repeat;
+  padding-top: 85px;
+  transition: 2s;
+
+
+  @include media768 {
+    background-position: top left 24%;
+    padding-top: 60px;
+  }
+
+
+  &-wrap {
+
+    height: 694px;
+    @include wrapPC;
+    position: relative;
+
+    @include media1050 {
+      height: 66.1vw;
+    }
+
+    @include media768 {
+      @include wrapSp;
+      height: 468px;
+    }
+  }
+
+  &-text {
+    position: absolute;
+    top: 82px;
+    top: 12%;
+    right: 0;
+    opacity: 0;
+    transition: 1s;
+    &.load {
+      opacity: 1;
+    }
+
+    @include media768 {
+      top: 36px;
+    }
+
+    h1 {
+      font-size: (56rem/16);
+      color: $main-Navy;
+      margin-bottom: 8px;
+
+      @include media1050 {
+        font-size: 5vw;
+      }
+
+      @include media768 {
+        font-size: (32rem/16);
+      }
+
+      br {
+        display: none;
+
+        @include media768 {
+          display: block;
+        }
+      }
+    }
+
+    h3 {
+      color: $main-Navy;
+      font-size: 2rem;
+      margin-bottom: 20px;
+
+      @include media1050 {
+        font-size: 3vw;
+      }
+
+      @include media768 {
+        font-size: (20rem/16);
+      }
+
+
+    }
+
+    .contactbtn {
+      @include contactBtn;
+    }
+
+  }
+
+}
+
+//About
+.About {
+
+  &-wrap {
+    background-color: $white-color2;
+    @include wrapPC;
+
+    @include media768 {
+      margin: 0 0;
+      max-width: 100%;
+      margin-bottom: 32px;
+    }
+
+  }
+
+  &-info {
+    max-width: 90%;
+    width: 1120px;
+    margin: 0 auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    margin-top: 88px;
+    margin-bottom: 88px;
+
+
+    @include media1050 {
+      margin: 0 auto;
+      padding-top: 6vw;
+      padding-bottom: 6vw;
+      margin-top: 8.38vw;
+      margin-bottom: 8.38vw;
+
+    }
+
+    @include media768 {
+      @include wrapSp;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin-top: 32px;
+      width: 440px;
+    }
+
+
+
+
+    h2 {
+      color: $main-Navy;
+      margin-bottom: 24px;
+      font-size: calc(34px + 16 * (100vw - 1051px)/389);
+
+      @media (min-width:1441px) {
+        font-size: 50px;
+      }
+
+
+      @include media1050 {
+        font-size: 3.2vw;
+        margin-bottom: 2.3vw;
+      }
+
+      @include media768 {
+        font-size: (24rem/16);
+        margin-bottom: 16px;
+      }
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 72px;
+
+      font-size: calc(28px + 8 * (100vw - 1051px)/389);
+
+      @media (min-width:1441px) {
+        font-size: 36px;
+      }
+
+      @include media1050 {
+        font-size: 2.6vw;
+        margin-bottom: 6.8vw;
+      }
+
+      @include media768 {
+        font-size: (20rem/16);
+        margin-bottom: 36px;
+      }
+    }
+
+    .flex-yoko {
+      display: flex;
+
+      @include media768 {
+        flex-direction: column;
+      }
+
+    }
+
+    .flex-r {
+      width: 100%;
+
+      @include media768 {
+        order: 2;
+      }
+
+      p {
+        margin-bottom: 80px;
+        margin-right: 18.6%;
+        font-size: (24rem/16);
+
+        @include media1050 {
+          font-size: 2.1vw;
+          margin-bottom: 7.7vw;
+        }
+
+        @include media768 {
+          font-size: 1rem;
+          margin: 0 auto;
+          margin-top: 16px;
+          margin-bottom: 36px;
+        }
+      }
+
+      .ViewBtn {
+        @include media768 {
+          text-align: center;
+        }
+
+        a {
+          @include viewBtn;
+        }
+
+        .mgl-8 {
+          margin-left: 8px;
+        }
+      }
+
+    }
+
+    .img {
+      width: 100%;
+
+      @include media768 {
+        order: 1;
+        max-width: 100%;
+        width: 440px;
+
+      }
+
+      img {
+        width: 100%;
+        vertical-align: bottom;
+      }
+    }
+
+  }
+
+}
+
+.service {
+  &-wrap {
+    background-color: $white-color2;
+    @include wrapPC;
+
+    @include media768 {
+      margin: 0 0;
+      max-width: 100%;
+      margin-bottom: 32px;
+    }
+  }
+
+  &-info {
+    max-width: 90%;
+    width: 1120px;
+    margin: 0 auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    margin-bottom: 88px;
+
+    @include media1050 {
+      margin: 0 auto;
+      padding-top: 6vw;
+      padding-bottom: 6vw;
+      margin-top: 8.38vw;
+      margin-bottom: 8.38vw;
+
+    }
+
+    @include media768 {
+      @include wrapSp;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin-top: 32px;
+      width: 440px;
+    }
+
+
+  }
+
+  &-flex {
+    display: flex;
+
+    @include media768 {
+      flex-direction: column;
+    }
+
+    .img-l {
+      padding-top: 80px;
+      width: 100%;
+
+      @include media1050 {
+        padding-top: 8vw;
+      }
+
+
+      @include media768 {
+        order: 2;
+        display: none;
+      }
+
+      img {
+        width: 100%;
+        vertical-align: bottom;
+      }
+    }
+
+    .flex-r {
+      margin-left: 8%;
+      width: 100%;
+
+      @include media768 {
+        order: 1;
+        margin-left: 0%;
+      }
+
+      h2 {
+        font-size: (50rem/16);
+        color: $main-Navy;
+        margin-bottom: 24px;
+        font-size: calc(34px + 16 * (100vw - 1051px)/389);
+
+        @media (min-width:1441px) {
+          font-size: 50px;
+        }
+
+        @include media1050 {
+          font-size: 3.2vw;
+          margin-bottom: 3.2vw;
+        }
+
+        @include media768 {
+          font-size: (24rem/16);
+          margin-bottom: 16px;
+        }
+      }
+
+      h3 {
+        color: $black-color;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        font-size: calc(28px + 8 * (100vw - 1051px)/389);
+
+        @media (min-width:1441px) {
+          font-size: 36px;
+        }
+
+        @include media1050 {
+          font-size: 2.6vw;
+          margin-bottom: 1.9vw;
+        }
+
+        @include media768 {
+          font-size: (20rem/16);
+          margin-bottom: 36px;
+        }
+      }
+
+      p {
+        font-size: (24rem/16);
+        margin-bottom: 50px;
+
+
+        @include media1050 {
+          font-size: 2.1vw;
+          margin-bottom: 4.8vw;
+        }
+
+        @include media768 {
+          font-size: 1rem;
+          margin: 0 auto;
+          margin-top: 16px;
+          margin-bottom: 36px;
+        }
+      }
+
+      .serviceImg {
+        display: none;
+
+        @include media768 {
+          display: block;
+          max-width: 100%;
+          width: 440px;
+        }
+      }
+
+      .ViewBtn {
+        @include media768 {
+          text-align: center;
+        }
+
+        a {
+          @include viewBtn;
+        }
+
+        .mgl-8 {
+          margin-left: 8px;
+        }
+      }
+
+    }
+
+  }
+}
+
+//news
+
+.news {
+
+  &-wrap {
+    background-color: $white-color2;
+    @include wrapPC;
+
+    @include media768 {
+      margin: 0 0;
+      max-width: 100%;
+      margin-bottom: 32px;
+    }
+  }
+
+  &-info {
+    max-width: 90%;
+    width: 1120px;
+    margin: 0 auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    margin-bottom: 88px;
+
+    @include media1050 {
+      margin: 0 auto;
+      padding-top: 6vw;
+      padding-bottom: 6vw;
+      margin-top: 8.38vw;
+      margin-bottom: 8.38vw;
+
+    }
+
+    @include media768 {
+      @include wrapSp;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin-top: 32px;
+      width: 440px;
+    }
+
+    h2 {
+      font-size: (50rem/16);
+      color: $main-Navy;
+      margin-bottom: 40px;
+      font-size: calc(34px + 16 * (100vw - 1051px)/389);
+
+      @media (min-width:1441px) {
+        font-size: 50px;
+      }
+
+      @include media1050 {
+        font-size: 3.2vw;
+        margin-bottom: 3.2vw;
+      }
+
+      @include media768 {
+        font-size: (24rem/16);
+        margin-bottom: 16px;
+      }
+    }
+
+
+
+    .btnwrap {
+      max-width: 90%;
+      margin: 0 auto;
+
+      @include media768 {
+        text-align: center;
+      }
+    }
+
+    a {
+      @include viewBtn(30%);
+      margin-top: 84px;
+
+      @include media1050 {
+        margin-top: 8vw;
+      }
+
+      @include media768 {
+        margin-top: 36px;
+      }
+    }
+
+    .dlSp {
+      max-width: 90%;
+      margin: 0 auto;
+
+      .newsitem {
+        display: flex;
+        align-items: center;
+        margin-bottom: 36px;
+
+        @include media1050 {
+          margin-bottom: 3.44vw;
+        }
+
+        @include media768 {
+          display: block;
+        }
+
+        .flex-f {
+          display: flex;
+          align-items: center;
+        }
+
+
+        dt {
+          display: inline-block;
+        }
+
+        dd {
+          display: inline-block;
+
+        }
+
+        .time {
+          time {
+            display: inline-block;
+            margin-right: 20px;
+            width: 90px;
+
+            @include media1050 {
+              font-size: calc(14px + 2 * (100vw - 769px)/281);
+            }
+
+            @include media768 {
+              font-size: (14rem/16);
+              margin-right: 0;
+              width: 80px;
+              padding: 0;
+              margin-right: 8px;
+            }
+          }
+        }
+
+        .pre {
+          display: inline-block;
+          width: 140px;
+          text-align: center;
+          border: 2px solid $main-Navy;
+          border-radius: 10px;
+          padding: 4px 8px;
+          margin-right: 24px;
+
+          @include media1050 {
+            font-size: calc(14px + 2 * (100vw - 769px)/281);
+          }
+
+          @include media768 {
+            font-size: (14rem/16);
+            width: 130px;
+            margin-left: 0;
+            margin-right: 0;
+          }
+
+        }
+
+
+
+        .text {
+          font-size: (20rem/16);
+          padding-left: 24px;
+
+          @include media1050 {
+            font-size: (20rem/16);
+            font-size: (18rem/16);
+            font-size: 2vw;
+          }
+
+          @include media768 {
+            font-size: (18rem/16);
+            padding-left: 0;
+            margin-top: 8px;
+
+          }
+
+        }
+
+
+      }
+
+      .newsitem:last-of-type {
+        margin-bottom: 0;
+      }
+
+    }
+
+    .mgl-8 {
+      margin-left: 8px;
+    }
+
+
+  }
+
+}
+
+.observer {
+  opacity: 0;
+
+  &.is-active {
+    opacity: 1;
+    transition: .6s;
+  }
+}
+
+//conatactFtr
+
+@import 'ctcFooter';
+
+//footer
+
+@import 'footer';

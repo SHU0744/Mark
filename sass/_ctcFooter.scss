@@ -1,0 +1,75 @@
+
+@import 'module';
+
+.conatactFtr{
+
+  background-image: url(../image/footer.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+  &-wrap {
+    height: 200px;
+    max-width: 78%;
+    width: 1120px;
+    margin: 0 auto;
+    position: relative;
+    @include media1050 {
+      height: 19vw;
+    }
+    @include media768 {
+      height: 240px;
+      @include wrapSp;
+    }
+  }
+
+  &-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    @include media1050 {
+      height: 19vw;
+    }
+    @include media768 {
+      display: block;
+      height: 240px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      @include media1050 {
+        font-size: 2.66vw;
+      }
+      @include media768{
+        font-size: (24rem/16);
+        padding-top: 40px;
+      }
+    }
+
+    br {
+      @include media768 {
+        display: none;
+      }
+    }
+
+    .contactbtnwrap {
+      @include media768 {
+        text-align: center;
+
+      }
+    }
+
+    .contactbtn {
+      @include contactBtn;
+
+      @include media768 {
+        margin-top: 7.4vw;
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,411 @@
+@import 'module';
+
+@import 'base';
+
+
+@import 'header';
+
+.homeTop {
+  border-bottom: 1px solid #979797;
+  padding-top: 85px;
+
+  @include media1050 {
+    padding-top: 8.1vw;
+  }
+
+  @include media768 {
+    border-bottom: none;
+    padding-top: 60px;
+  }
+
+
+  &-wrap {
+    margin-left: 18.6%;
+    height: 694px;
+    display: flex;
+    align-items: center;
+
+    @include media1050 {
+      height: 66.1vw;
+      margin-left: 11%;
+    }
+
+    @include media768 {
+      height: 468px;
+      margin-left: 0;
+      display: block;
+      position: relative;
+    }
+  }
+
+  .text {
+    margin-right: 14%;
+    transition: all 1s;
+    opacity: 0;
+
+    &.load {
+      opacity: 1;
+    }
+
+    &.is-drawerActive {
+      opacity: 0;
+    }
+
+
+    @include media768 {
+      z-index: 1;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.7);
+      width: 180px;
+      height: 118px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 78px;
+      margin-left: 10%;
+      padding-left: 14px;
+    }
+
+    h1 {
+      font-size: (64rem/16);
+
+      @include media1050 {
+        font-size: 4.8vw;
+      }
+
+      @include media768 {
+        font-size: (36rem/16);
+
+      }
+    }
+
+    p {
+      font-size: (24rem/16);
+
+      @include media1050 {
+        font-size: 3vw;
+        white-space: nowrap;
+      }
+
+      @include media768 {
+        font-size: 1rem;
+
+      }
+    }
+
+  }
+
+  .img {
+    background-image: url(../image/aboutimg.png);
+    background-size: auto;
+    background-position: top right;
+    background-repeat: no-repeat;
+    height: 694px;
+    width: 100%;
+
+    @include media1050 {
+      height: 66.1vw;
+    }
+
+    @include media768 {
+      height: 468px;
+      background-position: bottom right;
+      position: absolute;
+      background-size: cover;
+      overflow: visible;
+
+    }
+
+  }
+}
+
+//misson
+
+.misson {
+  margin-top: 88px;
+  margin-bottom: 88px;
+
+  @include media1050 {
+    margin-top: 8.36vw;
+    margin-bottom: 8.36vw;
+  }
+
+  @include media768 {
+    margin-top: 32px;
+    margin-bottom: 56px;
+  }
+
+  &-wrap {
+    background-color: $white-color2;
+    max-width: 62.5%;
+    width: 900px;
+    margin: 0 auto;
+
+    @include media768 {
+      max-width: 100%;
+    }
+  }
+
+  &-info {
+    padding: 64px 0;
+    position: relative;
+
+    @include media1050 {
+      padding: 6.1vw 0;
+    }
+
+    @include media768 {
+      padding-top: 40px;
+      padding-bottom: 56px;
+    }
+
+    .cover {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $white-color2;
+
+      &.show {
+        animation: .6s slider forwards;
+      }
+    }
+
+    @keyframes slider {
+      0% {
+        width: 100%;
+      }
+
+      100% {
+        width: 0;
+      }
+    }
+
+    h3 {
+      font-size: (36rem/16);
+      color: $main-Navy;
+      text-align: center;
+      margin-bottom: 48px;
+
+      @include media1050 {
+        font-size: 3.04vw;
+        margin-bottom: 4.6vw;
+      }
+
+      @include media768 {
+        font-size: (24rem/16);
+        margin-bottom: 36px;
+      }
+    }
+
+
+
+    h2 {
+      font-size: (48rem/16);
+      max-width: 60%;
+      width: 400px;
+      margin: 0 auto;
+      color: $main-Navy;
+      text-align: center;
+      background: linear-gradient(transparent 70%, $accent-Yellow 30%);
+
+      @include media1050 {
+        font-size: 4vw;
+      }
+
+      @include media768 {
+        width: 230px;
+        font-size: (28rem/16);
+      }
+    }
+
+    p {
+      font-size: (24rem/16);
+      max-width: 66%;
+      width: 600px;
+      margin: 0 auto;
+      margin-top: 60px;
+
+      @include media1050 {
+        font-size: 2.4vw;
+        margin-top: 5.7vw;
+      }
+
+      @include media768 {
+        font-size: (18rem/16);
+        margin-top: 48px;
+      }
+    }
+
+  }
+
+}
+
+
+.Leadership {
+  .Leadership-wrap {
+    @include wrapPC;
+
+    @include media768 {
+      @include wrapSp;
+    }
+  }
+
+  .tlt {
+    font-size: (36rem/16);
+    color: $main-Navy;
+    margin-bottom: 14px;
+
+    @include media1050 {
+      font-size: 2.6vw;
+      margin-bottom: 1.33vw;
+    }
+
+    @include media768 {
+      font-size: (20rem/16);
+      margin-bottom: 0;
+    }
+
+  }
+
+  .subTit {
+    font-size: (24rem/16);
+    color: $main-Navy;
+    margin-bottom: 56px;
+
+    @include media1050 {
+      font-size: 2.2vw;
+      margin-bottom: 5.33vw;
+    }
+
+    @include media768 {
+      font-size: 1rem;
+      margin-bottom: 36px;
+    }
+  }
+
+  .Leader-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    opacity: 0;
+    transition: .6s;
+
+    @include media1050 {
+      margin-bottom: 5.34vw;
+    }
+
+    @include media768 {
+      flex-direction: column;
+    }
+
+    &.is-active {
+      opacity: 1;
+      transition: .6s;
+    }
+  }
+
+  .Leader-item:last-of-type {
+    margin-bottom: 88px;
+
+    @include media1050 {
+      margin-bottom: 8.36vw;
+    }
+
+    @include media768 {
+      margin-bottom: 56px;
+
+    }
+  }
+
+  .img {
+    width: 100%;
+
+    @include media768 {
+      max-width: 100%;
+      width: 360px;
+      margin: 0 auto;
+    }
+
+    img {
+      max-width: 100%;
+      width: 500px;
+      vertical-align: bottom;
+    }
+  }
+
+  .info {
+    margin-left: 60px;
+    width: 100%;
+
+    @include media768 {
+      margin-left: 0;
+      max-width: 100%;
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: (32rem/16);
+      margin-bottom: 16px;
+
+      @include media1050 {
+        font-size: 3.2vw;
+        margin-bottom: 8px;
+      }
+
+      @include media768 {
+        font-size: (24rem/16);
+        margin-top: 8px;
+      }
+
+      span {
+        font-size: (24rem/16);
+        margin-right: 18px;
+
+        @include media1050 {
+          font-size: 2.4vw;
+
+        }
+
+        @include media768 {
+          font-size: 1rem;
+        }
+
+      }
+    }
+
+    p {
+      margin-top: 16px;
+      font-size: (24rem/16);
+
+      @include media1050 {
+        font-size: 1rem;
+        margin-top: 8px;
+
+      }
+    }
+  }
+
+  .infor {
+    margin-left: 0;
+    margin-right: 60px;
+
+    @include media768 {
+      margin-right: 0;
+      order: 1;
+    }
+  }
+
+}
+
+
+
+//conatactFtr
+
+@import 'ctcFooter';
+
+//footer
+
+@import 'footer';
