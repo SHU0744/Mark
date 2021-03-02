@@ -1,2 +1,8 @@
-# Mark
-https://www.figma.com/file/95L68MFkMKEPUsQwmbTwLY/Mark.Inc-%E5%85%B1%E6%9C%89%E7%94%A8?node-id=0%3A1
+<h1>コーポレートサイト</h1>
+<h2>使用言語</h2>
+<ul>
+<li>HTML5</li>
+<li>CSS3(Scss)</li>
+<li>javascript</li>
+<li>Vue.js 2</li>  
+</ul>
