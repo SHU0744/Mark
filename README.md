@@ -14,4 +14,4 @@
     <h2>制作期間</h2>
     <p>14日間</p>
     <h2>デザインカンプ</h2>
-    <p></p>
+    <p>https://www.figma.com/file/95L68MFkMKEPUsQwmbTwLY/Mark.Inc-%E5%85%B1%E6%9C%89%E7%94%A8?node-id=0%3A1</p>
