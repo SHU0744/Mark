@@ -9,7 +9,8 @@
         <li>Vue.js 2</li>
     </ul>
     <h2>アピールポイント</h2>
-    <p>IntersectionObserver APIを使用してスクロールアニメーション処理。Newsページ、ContactページはVue.jsを使用して開発。Contactページのバリデーションは非同期処理で実装。</p>
+    <p>IntersectionObserver APIを使用してスクロールアニメーション処理。Newsページ、ContactページはVue.jsを使用して開発。<br>
+    Newsページは種別に絞り込み可能。Contactページのバリデーションは非同期処理で実装。</p>
     <h2>制作期間</h2>
     <p>14日間</p>
     <h2>デザインカンプ</h2>
